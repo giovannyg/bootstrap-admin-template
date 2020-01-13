@@ -2,13 +2,14 @@ html,
 body {
   height: 100%;
   font-size: 100%;
+  font-family: Roboto, sans-serif;
 }
 
 body {
 /*   background: url("../../images/auth/login_background.jpg") no-repeat;
   background-position: center;
   background-size: cover; */
-  background: #002e5fe5;
+  background: #ffffff;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -32,12 +33,12 @@ body {
   max-width: 380px;
   padding: 15px;
   margin: auto;
-  background-color: rgba(240, 248, 255, 0.7);
+  background-color: rgba(226, 226, 226, 0.596);
   border-radius: 0.3rem;
 }
 
 #remember_checkbox_label {
-  line-height: 1.6;
+  line-height: 1.8;
   -webkit-user-select: none;  
   -moz-user-select: none;    
   -ms-user-select: none;      
