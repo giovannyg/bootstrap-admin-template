@@ -5,13 +5,26 @@ body {
 }
 
 body {
-  background: url("../../images/auth/login_background.jpg") no-repeat;
+/*   background: url("../../images/auth/login_background.jpg") no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
+  background: #002e5fe5;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media screen and (max-width: 540px) {
+  #auth_logo {
+    display: none !important;
+  }
+}
+
+@media screen and (max-height: 612px){
+  #auth_logo {
+    display: none !important;
+  }
 }
 
 .auth-form {
@@ -24,7 +37,7 @@ body {
 }
 
 #remember_checkbox_label {
-  line-height: 2;
+  line-height: 1.6;
   -webkit-user-select: none;  
   -moz-user-select: none;    
   -ms-user-select: none;      
@@ -45,6 +58,16 @@ body {
 /*Register and forgotten password*/
 .auth-form-extra-actions {
   text-align: center;
+}
+
+.auth-form-extra-actions-container {
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 320px) {
+  #create_account_link { display: block; margin-bottom: 5px; }
+  #forgotten_password_link { display: block; }
+  #auth_form_extra_actions_delimiter { display: none; }
 }
 
 .auth-form-extra-actions a {
