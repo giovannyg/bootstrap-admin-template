@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  background: url("../../images/auth/login_background.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.auth-form {
+  width: 98%;
+  max-width: 380px;
+  padding: 15px;
+  margin: auto;
+  background-color: rgba(240, 248, 255, 0.7);
+  border-radius: 0.3rem;
+}
+
+#remember_checkbox_label {
+  line-height: 2;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.auth-form .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.auth-form .form-control:focus {
+  z-index: 2;
+}
+
+/*Register and forgotten password*/
+.auth-form-extra-actions {
+  text-align: center;
+}
+
+.auth-form-extra-actions a {
+  text-decoration: none;
+}
