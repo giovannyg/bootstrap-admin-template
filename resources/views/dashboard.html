@@ -22,9 +22,9 @@
     <div class="row">
       <nav class="col-md-2 d-none d-md-block bg-light sidebar">
         <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+          <ul class="nav d-flex flex-column">
+            <li class="nav-item d-flex active">
+              <a class="nav-link flex-grow-1" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2">
                   <line x1="18" y1="20" x2="18" y2="10"></line>
@@ -33,8 +33,9 @@
                 </svg>
                 Inactive
               </a>
+              <span class="arrow-left"></span>
             </li>
-            <li class="nav-item d-flex active">
+            <li class="nav-item d-flex">
               <a class="nav-link flex-grow-1" href="#" style="height: 100%;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
@@ -43,10 +44,10 @@
                 </svg>
                 Active <span class="sr-only">(current)</span>
               </a>
-              <span class="arrow-left "></span>
+              <span class="arrow-left"></span>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li class="nav-item d-flex">
+              <a class="nav-link flex-grow-1" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -56,6 +57,7 @@
                 </svg>
                 Customers
               </a>
+              <span class="arrow-left "></span>
             </li>
           </ul>
         </div>
@@ -69,7 +71,8 @@
           </ol>
         </nav>
         <!-- col-md-9 ml-sm-auto col-lg-10 px-1 -->
-<!--         <div class=""> 
+        <div id="page_content" class="container-fluid px-3">
+          <h3 class="text-capitalize">Title</h3>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
@@ -451,7 +454,7 @@
               </tbody>
             </table>
           </div>
-        </div> -->
+        </div>
       </main>
     </div>
   </div>
