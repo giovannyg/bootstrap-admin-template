@@ -145,6 +145,9 @@ body {
   }
   #page_content {
     margin-top: $bread_crumbs_nav_height;
+    .table-responsive {
+      padding: 2.5px;
+    }
   }
 }
 

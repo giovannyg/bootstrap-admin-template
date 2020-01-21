@@ -132,6 +132,9 @@ body {
 [role=main] #page_content {
   margin-top: 53px;
 }
+[role=main] #page_content .table-responsive {
+  padding: 2.5px;
+}
 
 /* @media (min-width: 768px) {
   [role="main"] {
