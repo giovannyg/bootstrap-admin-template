@@ -1,6 +1,15 @@
 $bootstrap_primary_color: #007bff;
 $bootstrap_dark_color: #343a40;
 $bootstrap_light_color: #f8f9fa;
+
+//top navbar vars
+$top_navbar_height: 40px;
+$bread_crumbs_nav_height: 53px;
+
+//sidebar vars
+$sidebar_bg_color: #1e2c3a;
+$nav_item_active_color: #00eeff;
+
 body {
   font-size: .875rem;
   width: 100%;
@@ -15,17 +24,42 @@ body {
 }
 
 /*
+ * Navbar
+ */
+#top_navbar {
+  max-height: $top_navbar_height;
+  min-height: $top_navbar_height;
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  #collapsible_navbar_container {
+    @media screen and (max-width: 768px) {
+      background-color: $sidebar_bg_color;
+    }
+  }
+
+  .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+  }
+
+}
+
+/*
  * Sidebar
  */
 
 .sidebar {
+  background-color: $sidebar_bg_color !important;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 45px 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  //border-right: 1px solid rgba(0, 0, 0, .1);
   .sidebar-sticky {
     position: relative;
     top: 0;
@@ -34,42 +68,40 @@ body {
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 
     .nav {
+      
       .nav-item {
+        &:hover {
+          background-color: $bootstrap_dark_color;
+        }
         .nav-link {
           font-weight: 500;
-          color: #333;
+          color: white;
         }
-        
         .nav-link .feather {
           margin-right: 4px;
-          color: #999;
-        }
-        
-/*         .nav-link.active {
-          background-color: $bootstrap_primary_color;
           color: white;
-        } */
-        
-        .nav-link:hover .feather,
-        .nav-link.active .feather {
-          color: inherit;
+        }
+        .nav-link:hover .feather, a:hover {
+          color: $nav_item_active_color;
+        }
+        &.active {
+          background-color: $bootstrap_dark_color;
+          a { color: $nav_item_active_color; }
+          .nav-link .feather {
+            color: $nav_item_active_color;
+          }
+          .arrow-left { display: block; }
         }
         .arrow-left {
+          display: none;
           width: 0;
           height: 0;
           border-top: 18.5px solid transparent;
           border-bottom: 18.5px solid transparent;
-          border-right: 18.5px solid #f8f9fa;
-        }
-      }
-      .nav-item.active {
-        background-color: $bootstrap_primary_color;
-        a {
-          color: white;
+          border-right: 18.5px solid white;
         }
       }
     }
-
   }
   @supports ((position: -webkit-sticky) or (position: sticky)) {
     .sidebar-sticky {
@@ -89,53 +121,38 @@ body {
  */
 
 [role="main"] {
-  padding-top: 133px; /* Space for fixed navbar */
-  .breadcrumb {
-    background-color: $bootstrap_light_color;
-    height: 37px;
-    padding: 0;
-    border-radius: 0;
-    .breadcrumb-item {
-      line-height: 37px;
-      +::before {
-        margin: 0 5px;
-        content: '•';
+   margin-top: $top_navbar_height; /* Space for fixed navbar */
+  #breadcrumb_nav {
+    min-height: $bread_crumbs_nav_height;
+    max-height: $bread_crumbs_nav_height;
+    .breadcrumb {
+      background-color: $bootstrap_light_color;
+      height: 37px;
+      padding: 0;
+      border-radius: 0;
+      .breadcrumb-item {
+        line-height: 37px;
+        +::before {
+          margin: 0 5px;
+          content: '•';
+        }
+        a {
+          text-decoration: none;
+        }
+        display: flex;
       }
-      a {
-        text-decoration: none;
-      }
-      display: flex;
-/*       .breadcrumb-item-right-arrow {
-        width: 0px;
-        height: 0;
-        border-top: 12px solid $bootstrap_light_color;
-        border-bottom: 12px solid $bootstrap_light_color;
-        border-left: 8px solid $bootstrap_primary_color;
-        background-color: black;
-      } */
     }
   }
-}
-
-@media (min-width: 768px) {
-  [role="main"] {
-    padding-top: 45px; /* Space for fixed navbar */
+  #page_content {
+    margin-top: $bread_crumbs_nav_height;
   }
 }
 
-/*
- * Navbar
- */
-
-.navbar-brand {
-  font-size: 1rem;
-}
-
-.navbar .form-control {
-  padding: .75rem 1rem;
-  border-width: 0;
-  border-radius: 0;
-}
+/* @media (min-width: 768px) {
+  [role="main"] {
+    padding-top: 45px; /* Space for fixed navbar 
+  }
+} */
 
 .form-control-dark {
   color: #fff;
