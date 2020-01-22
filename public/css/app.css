@@ -5,6 +5,10 @@ body {
   height: 100%;
   font-family: Roboto, sans-serif;
 }
+body .footer {
+  max-height: 29px;
+  min-height: 29px;
+}
 
 .feather {
   width: 16px;
@@ -16,8 +20,8 @@ body {
  * Navbar
  */
 #top_navbar {
-  max-height: 40px;
-  min-height: 40px;
+  max-height: 45px;
+  min-height: 45px;
 }
 #top_navbar .navbar-brand {
   font-size: 1rem;
@@ -105,10 +109,11 @@ body {
  * Content
  */
 [role=main] {
-  margin-top: 40px;
+  margin-top: 45px;
   /* Space for fixed navbar */
 }
 [role=main] #breadcrumb_nav {
+  z-index: 999;
   min-height: 53px;
   max-height: 53px;
 }
@@ -130,10 +135,11 @@ body {
   text-decoration: none;
 }
 [role=main] #page_content {
+  margin-bottom: 39px;
   margin-top: 53px;
 }
-[role=main] #page_content .table-responsive {
-  padding: 2.5px;
+[role=main] #page_content table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > td:first-child:before, [role=main] #page_content table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > th:first-child:before {
+  top: 6px;
 }
 
 /* @media (min-width: 768px) {
