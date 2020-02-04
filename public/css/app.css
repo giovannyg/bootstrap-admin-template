@@ -11,8 +11,9 @@ body .footer {
 }
 
 .feather {
-  width: 16px;
-  height: 16px;
+  fill: white;
+  width: 14px;
+  height: 14x;
   vertical-align: text-bottom;
 }
 
@@ -20,8 +21,7 @@ body .footer {
  * Navbar
  */
 #top_navbar {
-  max-height: 45px;
-  min-height: 45px;
+  max-height: 40px;
 }
 #top_navbar .navbar-brand {
   font-size: 1rem;
@@ -48,7 +48,7 @@ body .footer {
   left: 0;
   z-index: 100;
   /* Behind the navbar */
-  padding: 45px 0 0;
+  padding: 40px 0 0;
   /* Height of navbar */
 }
 .sidebar .sidebar-sticky {
@@ -109,34 +109,35 @@ body .footer {
  * Content
  */
 [role=main] {
-  margin-top: 45px;
+  margin-top: 40px;
   /* Space for fixed navbar */
 }
 [role=main] #breadcrumb_nav {
   z-index: 999;
-  min-height: 53px;
-  max-height: 53px;
+  max-height: 35px;
 }
 [role=main] #breadcrumb_nav .breadcrumb {
   background-color: #f8f9fa;
-  height: 37px;
   padding: 0;
   border-radius: 0;
 }
 [role=main] #breadcrumb_nav .breadcrumb .breadcrumb-item {
-  line-height: 37px;
   display: flex;
 }
 [role=main] #breadcrumb_nav .breadcrumb .breadcrumb-item + ::before {
-  margin: 0 5px;
+  padding: 0;
+  margin: 0 15px;
   content: "•";
+  line-height: 35px;
 }
-[role=main] #breadcrumb_nav .breadcrumb .breadcrumb-item a {
+[role=main] #breadcrumb_nav .breadcrumb .breadcrumb-item a, [role=main] #breadcrumb_nav .breadcrumb .breadcrumb-item span {
+  max-width: 150px;
+  line-height: 35px;
   text-decoration: none;
 }
 [role=main] #page_content {
   margin-bottom: 39px;
-  margin-top: 53px;
+  margin-top: 45px;
 }
 [role=main] #page_content table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > td:first-child:before, [role=main] #page_content table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > th:first-child:before {
   top: 6px;

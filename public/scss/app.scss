@@ -1,10 +1,11 @@
 $bootstrap_primary_color: #007bff;
 $bootstrap_dark_color: #343a40;
+$bootstrap_secondary_color: #6c757d;
 $bootstrap_light_color: #f8f9fa;
 
 //top navbar vars
-$top_navbar_height: 45px;
-$bread_crumbs_nav_height: 53px;
+$top_navbar_height: 40px;
+$bread_crumbs_nav_height: 35px;
 
 //sidebar vars
 $sidebar_bg_color: #1e2c3a;
@@ -25,8 +26,9 @@ body {
 }
 
 .feather {
-  width: 16px;
-  height: 16px;
+  fill: white;
+  width: 14px;
+  height: 14x;
   vertical-align: text-bottom;
 }
 
@@ -34,8 +36,8 @@ body {
  * Navbar
  */
 #top_navbar {
+  
   max-height: $top_navbar_height;
-  min-height: $top_navbar_height;
   .navbar-brand {
     font-size: 1rem;
   }
@@ -73,9 +75,7 @@ body {
     height: calc(100vh - 48px);
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-
     .nav {
-      
       .nav-item {
         &:hover {
           background-color: $bootstrap_dark_color;
@@ -131,20 +131,21 @@ body {
    margin-top: $top_navbar_height; /* Space for fixed navbar */
   #breadcrumb_nav {
     z-index: 999;
-    min-height: $bread_crumbs_nav_height;
     max-height: $bread_crumbs_nav_height;
     .breadcrumb {
       background-color: $bootstrap_light_color;
-      height: 37px;
       padding: 0;
       border-radius: 0;
       .breadcrumb-item {
-        line-height: 37px;
         +::before {
-          margin: 0 5px;
+          padding: 0;
+          margin: 0 15px;
           content: '•';
+          line-height: $bread_crumbs_nav_height;
         }
-        a {
+        a, span {
+          max-width: 150px;
+          line-height: $bread_crumbs_nav_height;
           text-decoration: none;
         }
         display: flex;
@@ -153,7 +154,7 @@ body {
   }
   #page_content {
     margin-bottom: $footer_height + 10px;
-    margin-top: $bread_crumbs_nav_height;
+    margin-top: $bread_crumbs_nav_height + 10px;
     table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before { 
         top: 6px;
     }
