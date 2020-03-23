@@ -6,9 +6,9 @@ body {
 }
 
 body {
-  /*   background: url("../../images/auth/login_background.jpg") no-repeat;
-    background-position: center;
-    background-size: cover; */
+/*   background: url("../../images/auth/login_background.jpg") no-repeat;
+  background-position: center;
+  background-size: cover; */
   background: #ffffff;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +20,6 @@ body {
 #auth_logo {
   width: 25%;
 }
-
 @media screen and (max-width: 540px) {
   #auth_logo {
     width: 75%;
@@ -33,11 +32,13 @@ body {
     /* display: none !important; */
   }
 }
+
 /* @media screen and (max-height: 612px){
   #auth_logo {
     display: none !important;
   }
 } */
+
 .auth-form {
   width: 98%;
   max-width: 380px;
@@ -48,10 +49,10 @@ body {
 }
 
 #remember_checkbox_label {
-  line-height: 1.6rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  line-height: 1.600rem;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
   user-select: none;
 }
 
@@ -76,21 +77,11 @@ body {
 }
 
 @media screen and (max-width: 320px) {
-  #create_account_link {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  #forgotten_password_link {
-    display: block;
-  }
-
-  #auth_form_extra_actions_delimiter {
-    display: none;
-  }
+  #create_account_link { display: block; margin-bottom: 5px; }
+  #forgotten_password_link { display: block; }
+  #auth_form_extra_actions_delimiter { display: none; }
 }
+
 .auth-form-extra-actions a {
   text-decoration: none;
 }
-
-/*# sourceMappingURL=main.css.map */

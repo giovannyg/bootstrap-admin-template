@@ -23,6 +23,10 @@ body .footer {
 #top_navbar {
   max-height: 40px;
 }
+#top_navbar a #top_navbar_logo {
+  max-width: 147px;
+  max-height: 40px;
+}
 #top_navbar .navbar-brand {
   font-size: 14px;
 }
@@ -71,27 +75,23 @@ body .footer {
   color: white;
 }
 .sidebar .sidebar-sticky .nav .nav-item .nav-link:hover .feather, .sidebar .sidebar-sticky .nav .nav-item a:hover {
-  color: #00eeff;
+  color: #1ABB9C;
+}
+.sidebar .sidebar-sticky .nav .nav-item:not(.active) {
+  border-left: 4px solid transparent;
+}
+.sidebar .sidebar-sticky .nav .nav-item > a.nav-link {
+  padding-left: 0.3rem;
 }
 .sidebar .sidebar-sticky .nav .nav-item.active {
   background-color: #343a40;
+  border-left: solid 4px #1ABB9C;
 }
-.sidebar .sidebar-sticky .nav .nav-item.active a {
-  color: #00eeff;
+.sidebar .sidebar-sticky .nav .nav-item.active > a.nav-link {
+  color: #1ABB9C;
 }
-.sidebar .sidebar-sticky .nav .nav-item.active .nav-link .feather {
-  color: #00eeff;
-}
-.sidebar .sidebar-sticky .nav .nav-item.active .arrow-left {
-  display: block;
-}
-.sidebar .sidebar-sticky .nav .nav-item .arrow-left {
-  display: none;
-  width: 0;
-  height: 0;
-  border-top: 18.5px solid transparent;
-  border-bottom: 18.5px solid transparent;
-  border-right: 18.5px solid white;
+.sidebar .sidebar-sticky .nav .nav-item.active > a.nav-link > .feather {
+  color: #1ABB9C;
 }
 @supports (position: -webkit-sticky) or (position: sticky) {
   .sidebar .sidebar-sticky {
@@ -131,6 +131,7 @@ body .footer {
   line-height: 35px;
 }
 [role=main] #breadcrumb_nav .breadcrumb .breadcrumb-item a, [role=main] #breadcrumb_nav .breadcrumb .breadcrumb-item span {
+  color: #1ABB9C;
   max-width: 150px;
   line-height: 35px;
   text-decoration: none;

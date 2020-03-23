@@ -9,7 +9,7 @@ $bread_crumbs_nav_height: 35px;
 
 //sidebar vars
 $sidebar_bg_color: #1e2c3a;
-$nav_item_active_color: #00eeff;
+$nav_item_active_color: #1ABB9C;
 
 //footer
 $footer_height: 29px;
@@ -37,7 +37,12 @@ body {
  * Navbar
  */
 #top_navbar {
-  
+  a {
+    #top_navbar_logo {
+      max-width: 147px;
+      max-height: $top_navbar_height;
+    }
+  }
   max-height: $top_navbar_height;
   .navbar-brand {
     font-size: 14px;
@@ -92,21 +97,22 @@ body {
         .nav-link:hover .feather, a:hover {
           color: $nav_item_active_color;
         }
+        
+        &:not(.active) {
+          border-left: 4px solid transparent;
+        }
+        >a.nav-link {
+          padding-left: 0.3rem;
+        }
         &.active {
           background-color: $bootstrap_dark_color;
-          a { color: $nav_item_active_color; }
-          .nav-link .feather {
+          >a.nav-link { 
             color: $nav_item_active_color;
+            >.feather {
+              color: $nav_item_active_color;
+            }
           }
-          .arrow-left { display: block; }
-        }
-        .arrow-left {
-          display: none;
-          width: 0;
-          height: 0;
-          border-top: 18.5px solid transparent;
-          border-bottom: 18.5px solid transparent;
-          border-right: 18.5px solid white;
+          border-left: solid 4px $nav_item_active_color;
         }
       }
     }
@@ -145,6 +151,7 @@ body {
           line-height: $bread_crumbs_nav_height;
         }
         a, span {
+          color: $nav_item_active_color; 
           max-width: 150px;
           line-height: $bread_crumbs_nav_height;
           text-decoration: none;
