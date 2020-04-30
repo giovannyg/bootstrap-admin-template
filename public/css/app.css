@@ -67,8 +67,10 @@ body .footer {
   background-color: #343a40;
 }
 .sidebar .sidebar-sticky .nav .nav-item .nav-link {
-  font-weight: 400;
+  font-weight: 525;
   color: white;
+  text-transform: initial;
+  font-size: 0.88rem;
 }
 .sidebar .sidebar-sticky .nav .nav-item .nav-link .feather {
   margin-right: 4px;

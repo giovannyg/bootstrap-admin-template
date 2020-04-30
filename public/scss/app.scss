@@ -87,8 +87,10 @@ body {
           background-color: $bootstrap_dark_color;
         }
         .nav-link {
-          font-weight: 400;
+          font-weight: 525;
           color: white;
+          text-transform: initial;
+          font-size: 0.88rem;
         }
         .nav-link .feather {
           margin-right: 4px;
