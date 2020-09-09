@@ -1,0 +1,37 @@
+{
+  "name": "bootstrap-admin-template",
+  "version": "1.0.0",
+  "description": "Bootstrap admin template from scratch.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-dev-server",
+    "build:prod": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giovannyg/bootstrap-admin-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giovannyg/bootstrap-admin-template/issues"
+  },
+  "homepage": "https://github.com/giovannyg/bootstrap-admin-template#readme",
+  "devDependencies": {
+    "css-loader": "^4.3.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^4.5.2",
+    "datatables.net-bs4": "^1.10.21",
+    "popper.js": "^1.16.1",
+    "select2": "^4.0.13",
+    "style-loader": "^1.2.1"
+  }
+}
