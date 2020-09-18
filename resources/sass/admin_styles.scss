@@ -25,10 +25,6 @@ body {
   width: 100%;
   height: 100%;
   font-family: Roboto, sans-serif;
-  .footer {
-    max-height: $footer_height;
-    min-height: $footer_height;
-  }
 }
 
 .feather {
@@ -75,12 +71,12 @@ main {
   #content {
     display: flex;
     flex-direction: row;
-    height: calc(100vh - #{$top_navbar_height} - #{$footer_height});
+    height: calc(100vh - #{$top_navbar_height});
     #sidebar {
       flex-grow: 1;
       background-color: $sidebar_bg_color !important;
       z-index: 100;
-      height: calc(100vh - #{$top_navbar_height} - #{$footer_height});
+      //height: calc(100vh - #{$top_navbar_height} - #{$footer_height});
       overflow-x: hidden;
       overflow-y: auto;
       .sidebar-sticky {    
@@ -137,7 +133,7 @@ main {
         }
       }
     }
-    #current_page_content {
+    #current_page {
       flex-grow: 100;
       overflow-y: auto;
       overflow-x: hidden;
@@ -164,6 +160,12 @@ main {
 
             display: flex;
           }
+        }
+      }
+      #footer {
+        height: $footer_height;
+        span {
+          line-height: $footer_height;
         }
       }
     }
